@@ -28,3 +28,6 @@ class TestMaksukortti(unittest.TestCase):
     
     def test_ota_rahaa_palauttaa_true_kun_rahat_riittavat(self):
         self.assertEqual(self.maksukortti.ota_rahaa(3), True)
+    
+    def test_ota_rahaa_palauttaa_false_kun_rahat_riittamattomat(self):
+        self.assertEqual(self.maksukortti.ota_rahaa(11), False)
