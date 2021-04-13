@@ -25,6 +25,13 @@ public class Maksukortti {
         this.saldo = this.saldo - maara;
         return true;
     }
+    
+    public void syoEdullisesti() {
+        if (this.saldo >= 240) {
+            this.saldo -= 240;
+        }
+        
+    }
 
     @Override
     public String toString() {
